@@ -1,6 +1,8 @@
 # Check Steemit Account For New Followers and Unfollowers 
-This application is simple script to check your new followers &amp; unfollowers on Steemit Platform
+This application is simple script to check your new followers &amp; unfollowers on Steemit Platform.
+
 To learn follower and unfollower, program need first run. After that program compare with older created file on working directory.
+
 Run program from time to time to get what you want.
 
 # Requirements
