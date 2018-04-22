@@ -56,10 +56,13 @@ followers = []
 
 addToFollowerList(followers, info)
 
-unfollowers = getUnfollowers(followers)
-new_followers = getNewFollowers(followers)
-printNewFollowers(new_followers)
-printUnfollowers(unfollowers)
+if os.path.isfile(os.getcwd() + "/{}.txt".format(account_name)):
+    unfollowers = getUnfollowers(followers)
+    new_followers = getNewFollowers(followers)
+    printNewFollowers(new_followers)
+    printUnfollowers(unfollowers)
+else:
+    print("First time run")
 
 writeToFile(followers)
 
