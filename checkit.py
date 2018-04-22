@@ -44,10 +44,17 @@ def addToFollowerList(followers, l):
     for i in l:
         followers.append(i['follower'])
 
+def isExist(acc):
+    # TODO : Need more effective way
+    if acc['follower_count'] == 0:
+        print("There is no account called '{}'".format(account_name))
+        exit()
 
 account_name = input("Enter account name: ")
 s = Steem()
 account = s.get_follow_count(account_name)
+
+isExist(account)
 
 print("Account: {} has {} follower(s)".format(account_name, account['follower_count']))
 info = s.get_followers('{}'.format(account_name), 0, 'blog', account['follower_count'])
